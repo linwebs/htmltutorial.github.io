@@ -1,3 +1,4 @@
-# My Awesome Book
+# Linwebs HTML 教學
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+這是 Linwebs 所製作的 HTML 教學講義，若有錯誤歡迎 mail 與我聯絡 linwebs＠linwebs.tw
+
