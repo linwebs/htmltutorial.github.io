@@ -6,5 +6,7 @@
 >
 > 校閱: Linwebs、Chiahong
 
-
+{% hint style="info" %}
+版權所有，若需引用請著名引用來源 [https://htmltutorial.linwebs.tw/](https://htmltutorial.linwebs.tw/)
+{% endhint %}
 
