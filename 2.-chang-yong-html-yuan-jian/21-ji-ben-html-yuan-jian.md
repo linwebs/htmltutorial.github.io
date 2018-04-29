@@ -2,7 +2,7 @@
 
 #### 段落
 
-> 使用&lt;p&gt;來開始段落，使用&lt;/p&gt;來結束段落
+> 使用`<p>`來開始段落，使用`</p>`來結束段落
 
 ```markup
 <p>Linwebs | 林林.台灣</p>
@@ -13,7 +13,7 @@
 
 #### 換行
 
-> 使用&lt;br /&gt;來換行，PS: 也可寫成&lt;br&gt;
+> 使用`<br />`來換行，PS: 也可寫成`<br>`
 
 ```markup
 <p>Linwebs | 林林.台灣</p>
@@ -39,7 +39,9 @@
 <del>這是刪除的文字</del>
 ```
 
-####  標題 {#hang}
+
+
+#### 標題 {#hang}
 
 > h1到h6為HTML的標題語法，大家可依需求使用
 
@@ -52,9 +54,11 @@
 <h6>h6. Linwebs | 林林.台灣</h6>
 ```
 
-####  分隔線 {#hang}
 
-> 使用&lt;hr /&gt;來顯示分隔線
+
+#### 分隔線 {#hang}
+
+> 使用`<hr />`來顯示分隔線
 
 ```markup
 <p>Linwebs | 林林.台灣</p>
@@ -62,15 +66,176 @@
 <p>這是分隔線下的文字</p>
 ```
 
-####  圖片 {#hang}
+####  {#hang}
 
-> 使用&lt;img&gt;來顯示圖片，使用src屬性來指定圖片路徑，可使用相對路徑或是絕對路徑，也可配合下個小章節的HTML元件屬性來改變其寬度、高度
+#### 圖片 {#hang}
+
+> 使用`<img>`來顯示圖片，使用`src`屬性來指定圖片路徑，可使用相對路徑或是絕對路徑，也可配合下個小章節的HTML元件屬性來改變其寬度、高度
 
 ```markup
 <img src="linwebs.png">
 <h1>Linwebs | 林林.台灣</h1>
 <img height="100px" width="100px" src="logo.png" border="1">
 ```
+
+
+
+#### 連結 {#hang}
+
+> 使用`<a>`標籤來製作連結，可連結至文字、圖片、網頁等，兩個`<a>`標籤中放入顯示連結的文字，可使用`target`標籤指定連結開啟位置
+
+```markup
+<a href="https://linwebs.tw/">Linwebs | 林林.台灣</a>
+<a href="https://linwebs.tw/" target="_blank">Linwebs | 林林.台灣</a>
+```
+
+
+
+#### 清單 {#hang}
+
+> 使用`<ol>`來包含住`<li>`，可顯示有數字的清單，使用`<ul>`來包含住`<li>`，可顯示有圓點的清單  
+>   
+> 本欄中使用了兩個跳脫字元符號，由於此兩符號是HTML語言中的符號，故須使用跳脫字元方式顯示  
+> `&lt;`  =&gt;【&lt;】  
+> `&gt;` =&gt; 【&gt;】
+
+```markup
+<ol>
+    <li>&lt;ol&gt;</li>
+    <li>>Linwebs</li>
+    <li>林林.台灣</li>
+</ol>
+<ul>
+    <li>&lt;ul&gt;</li>
+    <li>HTML</li>
+    <li>教學</li>
+</ul>
+```
+
+
+
+#### 區塊 {#hang}
+
+> 使用`<div>`標籤來分割網頁區塊，多用來指定套用CSS的範圍
+
+```markup
+<div style="background-color:blue; color:white">
+    <p>Linwebs</p>
+    <p>林林.台灣</p>
+</div>
+```
+
+
+
+#### 樣式 {#hang}
+
+> 經常使用`<span>`來套用單行文字的CSS
+
+```markup
+<h4>
+    <span style="color:blue">Linwebs</span> 林林.台灣
+</h4>
+```
+
+
+
+#### 表格 {#shi-1}
+
+> 使用`<table>`標籤來製作表格，內含`<tr>`做為表格的列，`<td>`作為表格的欄，表格第一列中的欄位經常使用`<th>`來替代表示此欄的內容為欄位名稱
+>
+> 合併表格：在`<td>`後方加入`colspan="2"`表示將這一列表格中的2個欄位合併
+
+```markup
+<table border="2">
+    <tr>
+        <th>編號</th>
+        <th>名稱</th>
+        <th>網址</th>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td>Linwebs</td>
+        <td>linwebs.tw</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td>HTML教學</td>
+        <td>htmltutorial.linwebs.tw</td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td colspan="2">Linwebs | 林林.台灣</td>
+    </tr>
+</table>
+```
+
+
+
+#### 框架 {#shi-1}
+
+> 使用`<frame>`標籤來引用檔案，多用於引用網頁，呈現頁中頁的效果，YouTube也有提供`<iframe>`可讓使用者插入其影片於網頁中，甚至可修改是否自動播放、循環播放、顯示播放器工具列等，以下提供兩種範例，一是分割瀏覽器為四等分，以Linwebs網站作為範例，二是`<iframe>`連結，嵌入YouTube影片
+
+```markup
+<h1>Linwebs</h1>
+<hr />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" "frameborder="0" allowfullscreen></iframe>
+```
+
+```markup
+<frameset cols="50%,50%" rows="50%,50%">
+    <frame src="https://linwebs.tw/" />
+    <frame src="https://linwebs.tw/note" />
+    <frame src="https://linwebs.tw/diary" />
+    <frame src="https://linwebs.tw/login" />
+</frameset>
+```
+
+
+
+#### 表單 {#shi-1}
+
+> 使用`<form>`標籤來製作表單，須以其他網頁後端語言結合方可運作，如：結合PHP語言，製作登錄系統表單，action指定傳送的網址，可使用相對路徑、絕對路徑等網址，method指定傳送的方法，有GET【顯示於網址】和POST【隱藏傳送】兩種方式，而元素則有非常多種，常用的有text【文字】、password【密碼】、radio【單選框】、checkbox【複選框】、submit【送出】等元素，其中需有submit來送出表單，否則此表單將無用處
+
+> `type`                 =&gt; 指定類別  
+> `placeholder`   =&gt; 指定提示文字  
+> `value`               =&gt; 指定其值  
+> `name`                 =&gt; 為PHP程式辨認欄位的方式
+
+{% code-tabs %}
+{% code-tabs-item title="簡易帳號密碼輸入欄" %}
+```markup
+<form action="login.php" method="post">
+    <input type="text" name="account" placeholder="請輸入帳號" />
+        <br />
+    <input type="password" name="password" placeholder="請輸入密碼" />
+        <br />
+    <input type="submit" value="送出" />
+</form>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="數字與核選方塊" %}
+```markup
+<form action="confirm.php" method="post">
+    <h2>Linwebs 註冊表單</h2>
+    <hr />
+    <input type="radio" name="radio" value="1" />高中職<br />
+    <input type="radio" name="radio" value="2" />大專院校<br />
+    <input type="radio" name="radio" value="3" />研究所<br />
+    <hr />
+    <input type="checkbox" name="checkbox" value="1" />查看<br />
+    <input type="checkbox" name="checkbox" value="2" />編輯<br />
+    <input type="checkbox" name="checkbox" value="3" />發文<br />
+    <hr />
+    請輸入驗證碼: <input type="number" name="student_id" placeholder="請輸入數字" />
+    <br />
+    <input type="submit" value="送出" />
+</form>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
